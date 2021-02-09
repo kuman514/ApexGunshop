@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    background-color: #ff8000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    width: 1000px;
+    background-color: #ffffff;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.item {
+    text-align: left;
+}
