@@ -73,59 +73,55 @@ class Item {
   }
 }
 
-let gunType = {
-  1: [11, 12, 13],
-  2: [21, 22, 23, 24],
-  3: [31, 32],
-  4: [41, 42, 43]
-}
+let gunType = new Map()
+gunType.set(1, [11, 12, 13])
+gunType.set(2, [21, 22, 23, 24])
+gunType.set(3, [31, 32])
+gunType.set(4, [41, 42, 43])
 
-let gun = {
-  11: new Item('R-99', 10000, 3),
-  12: new Item('볼트', 10000, 3),
-  13: new Item('얼터네이터', 10000, 3),
-  21: new Item('R-301', 10000, 3),
-  22: new Item('플랫라인', 10000, 3),
-  23: new Item('헴록', 10000, 3),
-  24: new Item('G7 스카우트', 10000, 3),
-  31: new Item('EVA-8', 10000, 3),
-  32: new Item('마스티프', 10000, 3),
-  41: new Item('트리플 테이크', 10000, 3),
-  42: new Item('롱보우', 10000, 3),
-  43: new Item('센티넬', 10000, 3)
-}
+let guns = new Map()
+guns.set(11, new Item('R-99', 10000, 3))
+guns.set(12, new Item('볼트', 10000, 3))
+guns.set(13, new Item('얼터네이터', 10000, 3))
+guns.set(21, new Item('R-301', 10000, 3))
+guns.set(22, new Item('플랫라인', 10000, 3))
+guns.set(23, new Item('헴록', 10000, 3))
+guns.set(24, new Item('G7 스카우트', 10000, 3))
+guns.set(31, new Item('EVA-8', 10000, 3))
+guns.set(32, new Item('마스티프', 10000, 3))
+guns.set(41, new Item('트리플 테이크', 10000, 3))
+guns.set(42, new Item('롱보우', 10000, 3))
+guns.set(43, new Item('센티넬', 10000, 3))
 
-let option = {
-  11: [1, 3, 5, 6, 9],
-  12: [1, 3, 5, 6, 11],
-  13: [1, 3, 5, 6, 9],
-  21: [1, 3, 5, 7, 9, 14],
-  22: [3, 5, 7, 10, 14],
-  23: [1, 3, 5, 7, 10],
-  24: [1, 3, 5, 7, 9, 15],
-  31: [2, 6, 12, 15],
-  32: [2, 6, 12],
-  41: [4, 5, 8, 13, 16],
-  42: [4, 5, 8, 13],
-  43: [4, 5, 8, 13, 17]
-}
+let attachType = new Map()
+attachType.set(11, [1, 3, 5, 6, 9])
+attachType.set(12, [1, 3, 5, 6, 11])
+attachType.set(13, [1, 3, 5, 6, 9])
+attachType.set(21, [1, 3, 5, 7, 9, 14])
+attachType.set(22, [3, 5, 7, 10, 14])
+attachType.set(23, [1, 3, 5, 7, 10])
+attachType.set(24, [1, 3, 5, 7, 9, 15])
+attachType.set(31, [2, 6, 12, 15])
+attachType.set(32, [2, 6, 12])
+attachType.set(41, [4, 5, 8, 13, 16])
+attachType.set(42, [4, 5, 8, 13])
+attachType.set(43, [4, 5, 8, 13, 17])
 
-let attach = {
-  1: new Item('총신 안정기', 10000, 3),
-  2: new Item('샷건 볼트', 8000, 2),
-  3: new Item('개머리판', 10000, 3),
-  4: new Item('저격총 전용 개머리판', 10000, 3),
-  5: new Item('확장 탄창', 10000, 3),
-  6: new Item('디지털 스레트', 10000, 3),
-  7: new Item('3배율 스코프', 10000, 3),
-  8: new Item('6배율 스코프', 10000, 3),
-  9: new Item('경량 탄약 보충', 10000, 3),
-  10: new Item('중량 탄약 보충', 10000, 3),
-  11: new Item('에너지 탄약 보충', 10000, 3),
-  12: new Item('산탄총 탄약 보충', 10000, 3),
-  13: new Item('저격총 탄약 보충', 10000, 3),
-  14: new Item('앤빌 리시버', 10000, 3),
-  15: new Item('더블탭 트리거', 10000, 3),
-  16: new Item('초크 활성화', 10000, 3),
-  17: new Item('실드 셀 증폭 활성화', 10000, 3)
-}
+let attaches = new Map()
+attaches.set(1, new Item('총신 안정기', 10000, 3))
+attaches.set(2, new Item('샷건 볼트', 8000, 2))
+attaches.set(3, new Item('개머리판', 10000, 3))
+attaches.set(4, new Item('저격총 전용 개머리판', 10000, 3))
+attaches.set(5, new Item('확장 탄창', 10000, 3))
+attaches.set(6, new Item('디지털 스레트', 10000, 3))
+attaches.set(7, new Item('3배율 스코프', 10000, 3))
+attaches.set(8, new Item('6배율 스코프', 10000, 3))
+attaches.set(9, new Item('경량 탄약 보충', 10000, 3))
+attaches.set(10, new Item('중량 탄약 보충', 10000, 3))
+attaches.set(11, new Item('에너지 탄약 보충', 10000, 3))
+attaches.set(12, new Item('산탄총 탄약 보충', 10000, 3))
+attaches.set(13, new Item('저격총 탄약 보충', 10000, 3))
+attaches.set(14, new Item('앤빌 리시버', 10000, 3))
+attaches.set(15, new Item('더블탭 트리거', 10000, 3))
+attaches.set(16, new Item('초크 활성화', 10000, 3))
+attaches.set(17, new Item('실드 셀 증폭 활성화', 10000, 3))
