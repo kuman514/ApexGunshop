@@ -5,6 +5,8 @@
         <meta charset="utf-8">
         <title>에이펙스 레전드 총기 상점</title>
         <link rel="stylesheet" href="css/main.css">
+        <script src="js/data.js"></script>
+        <script src="js/optioncontainer.js"></script>
     </head>
     <body>
         <section>
@@ -13,36 +15,41 @@
                     <img src="img/bloodhound.png">
                 </div>
                 <div class="item">
+                    <!-- 총기 종류 -->
+                    <h2>총기 종류</h2>
                     <div class="option1">
-                        <h2>총기 종류</h2>
-                        <select class="" name="">
+                        <select class="comboSelect">
                             <option value="0">선택하세요</option>
                             <option value="1">기관단총</option>
                             <option value="2">돌격소총</option>
                         </select>
                     </div>
+                    <!-- 총기 -->
+                    <h2>총기</h2>
                     <div class="option2">
-                        <h2>총기</h2>
-                        <select class="" name="">
+                        <select class="comboSelect">
                             <option value="0">선택하세요</option>
                             <option value="11">R-99</option>
                             <option value="21">R-301</option>
                             <option value="23">헴록</option>
                         </select>
                     </div>
+                    <!-- 총기 부착물 -->
+                    <h2>총기 부착물</h2>
                     <div class="option3">
-                        <h2>총기 부착물</h2>
                         <input type="checkbox" name="attachment" value="1"> 총신 안정기<br>
                         <input type="checkbox" name="attachment" value="3"> 개머리판<br>
                         <input type="checkbox" name="attachment" value="5"> 확장 탄창<br>
                         <input type="checkbox" name="attachment" value="6"> 디지털 스레트<br>
                         <input type="checkbox" name="attachment" value="9" disabled="disabled"> 경량 탄약 보충<br>
                     </div>
+                    <!-- 카트에 담기 버튼 -->
                     <div class="cartbutton">
                         <h2>카트에 담기</h2>
                     </div>
+                    <!-- 장바구니 -->
+                    <h2>장바구니</h2>
                     <div class="cart">
-                        <h2>장바구니</h2>
                         <div id="1" class="cartitem">
                             <p>[기관단총] R-99 + 총신 안정기, 개머리판, 디지털 스레트 / 개당 nnn원</p>
                             <p>수량 <input type="number" value="0"></p>
@@ -52,9 +59,11 @@
                             <p>수량 <input type="number" value="0"></p>
                         </div>
                     </div>
+                    <!-- 총 가격 -->
                     <div class="total">
                         <h2>총 가격 nnnnn원</h2>
                     </div>
+                    <!-- 결제 버튼  -->
                     <div class="purchasebutton">
                         <h2>결제</h2>
                     </div>
