@@ -38,7 +38,14 @@ class optionContainer {
           target.innerHTML = inner
         }
         break
-      case 3:
+      case 3: {
+          let target = targetDiv
+          let inner = ''
+          this.contain[index].forEach(item => {
+            inner += `<input type="checkbox" name="attachment" value="1"> 총신 안정기<br>`
+          })
+          target.innerHTML = inner
+        }
         break
       default:
         break
