@@ -49,6 +49,7 @@ class optionContainer {
         }
         break
       case 3: {
+          // not completed. continue here.
           let target = targetDiv
           let inner = ''
           this.contain[index].forEach(item => {
