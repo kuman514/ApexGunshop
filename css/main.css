@@ -30,6 +30,10 @@ section {
     padding: 5px;
 }
 
+.button:hover {
+    cursor: pointer;
+}
+
 .cartbutton {
     background-color: #40ccff;
     text-align: center;
