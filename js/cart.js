@@ -2,6 +2,7 @@ class Cart {
   constructor () {
     this.contain = new Map()
     this.addingItemId = 1
+    this.totalPrice = 0
   }
   add () {
     let option1Sel = document.querySelector('.option1').querySelector('select')
@@ -30,7 +31,6 @@ class Cart {
       let itemValue = Number(item.value)
       if (item.checked) {
         let attach = attaches.get(itemValue)
-        console.log(attach)
         if (attach.stock < max) {
           max = attach.stock
         }
@@ -47,6 +47,7 @@ class Cart {
       )
       this.renderAppend(this.addingItemId)
       this.addingItemId++
+      this.onChange()
     } else {
       alert('재고가 있는 다른 총기나 옵션을 선택 바랍니다.')
     }
@@ -62,7 +63,17 @@ class Cart {
   renderAppend (added) {
      document.querySelector('.cart').innerHTML += this.contain.get(added).getRenderHTML
   }
+  calculateTotalPrice () {
+    this.totalPrice = 0
+    this.contain.forEach(item => {
+      this.totalPrice += item.price * item.amount
+    })
+  }
   renderTotalPrice () {
-
+    document.querySelector('.total').innerHTML = `<h2>총 가격 ${this.totalPrice}원</h2>`
+  }
+  onChange () {
+    this.calculateTotalPrice()
+    this.renderTotalPrice()
   }
 }

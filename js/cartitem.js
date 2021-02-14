@@ -12,7 +12,7 @@ class CartItem {
     return `
       <div id="${this.id}" class="cartitem">
         <p>${this.toString}</p>
-        <p>수량 <input type="number" value="1" onchange="cart.get(${this.id}).onNumberChange(this)"></p>
+        <p>수량 <input type="number" value="${this.amount}" onchange="cart.get(${this.id}).onNumberChange(this)"></p>
       </div>
     `
   }
