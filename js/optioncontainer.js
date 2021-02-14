@@ -53,8 +53,9 @@ class optionContainer {
           this.contain[index].forEach(item => {
             let attach = attaches.get(item)
             let disable = ''
-            if (attaches.stock <= 0) {
-              disable = 'disabled="disabled"'
+            console.log(attach)
+            if (attach.stock <= 0) {
+              disable = 'disabled'
             }
             inner += `<input type="checkbox" name="attachment" value="${item}" ${disable}> ${attach.name} (+ ${attach.price}원)<br>`
           })
