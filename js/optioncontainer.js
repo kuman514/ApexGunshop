@@ -12,11 +12,15 @@ class optionContainer {
       case 2:
         if (selected !== 0) {
           this.contain[index] = Array.from(gunType.get(selected))
+        } else {
+          this.contain[index] = []
         }
         break
       case 3:
         if (selected !== 0) {
           this.contain[index] = Array.from(attachType.get(selected))
+        } else {
+          this.contain[index] = []
         }
         break
       default:
@@ -26,7 +30,6 @@ class optionContainer {
   render (level) {
     let index = level - 1
     let targetDiv = document.querySelector(`.option${level}`)
-    console.log(targetDiv)
     switch (level) {
       case 1: {
           let target = targetDiv.querySelector('.comboSelect')
