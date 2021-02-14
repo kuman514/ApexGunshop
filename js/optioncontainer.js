@@ -1,8 +1,7 @@
 class optionContainer {
   constructor () {
     this.contain = [[], [], []]
-    this.refreshOptions(1, 0)
-    //this.render(1)
+    this.onChange(1, 0)
   }
   refreshOptions (level, selected) {
     let index = level - 1
@@ -49,11 +48,15 @@ class optionContainer {
         }
         break
       case 3: {
-          // not completed. continue here.
           let target = targetDiv
           let inner = ''
           this.contain[index].forEach(item => {
-            inner += `<input type="checkbox" name="attachment" value="1"> 총신 안정기<br>`
+            let attach = attaches.get(item)
+            let disable = ''
+            if (attaches.stock <= 0) {
+              disable = 'disabled="disabled"'
+            }
+            inner += `<input type="checkbox" name="attachment" value="${item}" ${disable}> ${attach.name} (+ ${attach.price}원)<br>`
           })
           target.innerHTML = inner
         }
@@ -62,6 +65,8 @@ class optionContainer {
         break
     }
   }
+  onChange (level, selected) {
+    this.refreshOptions(level, selected)
+    this.render(level)
+  }
 }
-
-let optionCnt = new optionContainer()

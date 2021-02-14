@@ -47,7 +47,7 @@ attachType.set(42, [4, 5, 8, 13])
 attachType.set(43, [4, 5, 8, 13, 17])
 
 let attaches = new Map()
-attaches.set(1, new Item('총신 안정기', 10000, 3))
+attaches.set(1, new Item('총신 안정기', 10000, 0))
 attaches.set(2, new Item('샷건 볼트', 8000, 2))
 attaches.set(3, new Item('개머리판', 10000, 3))
 attaches.set(4, new Item('저격총 전용 개머리판', 10000, 3))
