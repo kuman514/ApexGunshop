@@ -45,7 +45,11 @@ class optionContainer {
           let inner = '<option value="0">선택하세요</option>'
           this.contain[index].forEach(item => {
             let gun = guns.get(item)
-            inner += `<option value="${item}">${gun.name}</option>`
+            let gunStock = `남은 수량 ${gun.stock}개`
+            if (gun.stock <= 0) {
+              gunStock = '재고 없음'
+            }
+            inner += `<option value="${item}">${gun.name} (${gun.price}원) (${gunStock})</option>`
           })
           target.innerHTML = inner
         }
@@ -55,11 +59,13 @@ class optionContainer {
           let inner = ''
           this.contain[index].forEach(item => {
             let attach = attaches.get(item)
+            let attachStock = `남은 수량 ${attach.stock}개`
             let disable = ''
             if (attach.stock <= 0) {
+              attachStock = '재고 없음'
               disable = 'disabled'
             }
-            inner += `<input type="checkbox" name="attachment" value="${item}" ${disable}> ${attach.name} (+ ${attach.price}원)<br>`
+            inner += `<input type="checkbox" name="attachment" value="${item}" ${disable}> ${attach.name} (+${attach.price}원) (${attachStock})<br>`
           })
           target.innerHTML = inner
         }
