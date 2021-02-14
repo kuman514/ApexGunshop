@@ -6,10 +6,18 @@ class Cart {
   add () {
     let option1Sel = document.querySelector('.option1').querySelector('select')
     let guntypeIndex = Number(option1Sel.options[option1Sel.selectedIndex].value)
+    if (guntypeIndex === 0) {
+      alert('총기 종류를 선택해주세요.')
+      return
+    }
     let guntype = gunTypeName.get(guntypeIndex)
 
     let option2Sel = document.querySelector('.option2').querySelector('select')
     let nameIndex = Number(option2Sel.options[option2Sel.selectedIndex].value)
+    if (nameIndex === 0) {
+      alert('총기를 선택해주세요.')
+      return
+    }
     let gunItem = guns.get(nameIndex)
     let name = gunItem.name
     let gunPrice = gunItem.price
