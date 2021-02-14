@@ -58,8 +58,6 @@ class Cart {
   clear () {
     this.contain.clear()
   }
-  renderAllCartItems () {
-  }
   renderAppend (added) {
      document.querySelector('.cart').innerHTML += this.contain.get(added).getRenderHTML
   }
