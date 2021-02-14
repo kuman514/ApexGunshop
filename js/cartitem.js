@@ -1,5 +1,6 @@
 class CartItem {
-  constructor (_guntype, _name, _options, _price, _amount, _max) {
+  constructor (_id, _guntype, _name, _options, _price, _amount, _max) {
+    this.id = _id
     this.type = _guntype
     this.name = _name
     this.options = _options
@@ -9,7 +10,7 @@ class CartItem {
   }
   get getRenderHTML () {
     return `
-      <div id="1" class="cartitem">
+      <div id="${this.id}" class="cartitem">
         <p>${this.toString}</p>
         <p>수량 <input type="number" value="1"></p>
       </div>

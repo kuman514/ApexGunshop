@@ -43,7 +43,7 @@ class Cart {
     if (max > 0) {
       this.contain.set(
         this.addingItemId,
-        new CartItem(guntype, name, options, price, 1, max)
+        new CartItem(this.addingItemId, guntype, name, options, price, 1, max)
       )
       this.renderAppend(this.addingItemId)
       this.addingItemId++
