@@ -37,6 +37,7 @@ class Cart {
         this.addingItemId,
         new CartItem(guntype, name, options, price, 1, max)
       )
+      this.renderAppend(this.addingItemId)
       this.addingItemId++
     } else {
       alert('재고가 있는 다른 총기나 옵션을 선택 바랍니다.')
@@ -49,6 +50,9 @@ class Cart {
     this.contain.clear()
   }
   renderAllCartItems () {
+  }
+  renderAppend (added) {
+     document.querySelector('.cart').innerHTML += this.contain.get(added).getRenderHTML
   }
   renderTotalPrice () {
 
