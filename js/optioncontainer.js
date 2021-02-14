@@ -67,7 +67,7 @@ class optionContainer {
     }
   }
   onChange (level, selected) {
-    this.refreshOptions(level, selected)
+    this.refreshOptions(level, Number(selected))
     this.render(level)
   }
 }
