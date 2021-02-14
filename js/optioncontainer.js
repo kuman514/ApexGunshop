@@ -56,7 +56,6 @@ class optionContainer {
           this.contain[index].forEach(item => {
             let attach = attaches.get(item)
             let disable = ''
-            console.log(attach)
             if (attach.stock <= 0) {
               disable = 'disabled'
             }
