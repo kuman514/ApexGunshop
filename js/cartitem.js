@@ -12,7 +12,7 @@ class CartItem {
     return `
       <div id="${this.id}" class="cartitem">
         <p>${this.toString}</p>
-        <p>수량 <input type="number" value="1"></p>
+        <p>수량 <input type="number" value="1" onchange="cart.get(${this.id}).onNumberChange(this)"></p>
       </div>
     `
   }
@@ -30,5 +30,10 @@ class CartItem {
       }
     }
     return `[${this.type}] ${this.name}${optToStr}/ 개당 ${this.price}원`
+  }
+  onNumberChange (element) {
+    let finalNum = Math.min(this.maxAmount, Math.max(0, element.value))
+    this.amount = finalNum
+    element.value = this.amount
   }
 }
