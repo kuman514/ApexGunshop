@@ -77,16 +77,17 @@ class Cart {
     this.calculateTotalPrice()
     this.renderTotalPrice()
   }
-  purchase () {
+  getPurchaseMessage () {
     let msg = '구매하고자 하시는 상품\n'
     this.contain.forEach(item => {
       msg += `${item.toString} ${item.amount}개\n`
     })
     msg += `총 ${this.totalPrice}원입니다. 구매하시겠습니까?`
-    if (window.confirm(msg)) {
-      this.contain.clear()
-      this.clearRender()
-      this.onChange()
-    }
+    return msg
+  }
+  purchase () {
+    this.contain.clear()
+    this.clearRender()
+    this.onChange()
   }
 }

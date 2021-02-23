@@ -53,10 +53,20 @@
                         <h2>총 가격 0원</h2>
                     </div>
                     <!-- 결제 버튼  -->
-                    <div class="button purchasebutton" onclick="cart.purchase()">
+                    <div class="button purchasebutton" onclick="onClickPurchaseButton()">
                         <h2>결제</h2>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="modal hidden">
+            <div class="modal-overlay">
+            </div>
+            <div class="modal-content">
+                <h2>메시지 내용</h2>
+                <p class="modal-message">모달창</p>
+                <input class="inputbutton" type="button" value="예" onclick="onDecidePurchase()">
+                <input class="inputbutton" type="button" value="아니오" onclick="closeModal()">
             </div>
         </section>
         <script>

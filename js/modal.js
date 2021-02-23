@@ -16,3 +16,13 @@ function closeInit () {
   close.classList.add('hidden')
   close.classList.remove('modal')
 }
+
+function onClickPurchaseButton () {
+  sendToModal(cart.getPurchaseMessage())
+  openModal()
+}
+
+function onDecidePurchase () {
+  cart.purchase()
+  closeModal()
+}
