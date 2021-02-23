@@ -6,23 +6,9 @@ body {
     align-items: center;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 section {
-    width: 1000px;
+    width: 600px;
     background-color: #ffffff;
-}
-
-.main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.shopimg {
-    padding: 5px;
 }
 
 .item {

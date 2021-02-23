@@ -1,0 +1,51 @@
+.shopimg {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+img {
+    width: 400px;
+    height: auto;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+h1 {
+    padding-right: 10px;
+}
+
+.modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 50px 100px;
+    top: 0px;
+    left: 0px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    position: relative;
+    width: 30%;
+}
+
+.hidden {
+    display: none;
+}

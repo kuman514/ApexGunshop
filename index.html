@@ -4,18 +4,23 @@
     <head>
         <meta charset="utf-8">
         <title>에이펙스 레전드 총기 상점</title>
+
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/overlay.css">
+
         <script src="js/data.js"></script>
         <script src="js/optioncontainer.js"></script>
         <script src="js/cartitem.js"></script>
         <script src="js/cart.js"></script>
+        <script src="js/modal.js"></script>
     </head>
     <body>
+        <div class="shopimg modal">
+            <h1>블러드하운드를 클릭하면 쇼핑 창으로 넘어갑니다.</h1>
+            <img src="img/bloodhound.png" onclick="closeInit()">
+        </div>
         <section>
             <div class="main">
-                <div class="shopimg">
-                    <img src="img/bloodhound.png">
-                </div>
                 <div class="item">
                     <!-- 총기 종류 -->
                     <h2>총기 종류</h2>
